@@ -25,7 +25,12 @@ export default class ScrollAnimations {
 
   handleIntersect(entries) {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
+      if (
+        entry.isIntersecting &&
+        entry.target.getAttribute('data-animated') === null
+      ) {
+        entry.target.setAttribute('data-animated', '')
+
         const attr = entry.target.getAttribute('data-animation')
         animations.get(attr)(entry.target)
       }

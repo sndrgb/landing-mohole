@@ -29,6 +29,8 @@ animations.set('title', (el) => {
     by: 'chars'
   })[0].chars
 
+  el.style.opacity = 1
+
   return gsap.from(letters, {
     opacity: 0,
     translateX: 20,
@@ -40,7 +42,11 @@ animations.set('title', (el) => {
 })
 
 animations.set('image', (el) => {
-  return gsap.from(el, { scale: 2 })
+  return gsap.from(el, {
+    scale: 1.1,
+    filter: 'blur(30px)',
+    duration: 1
+  })
 })
 
 animations.set('text', (el) => {
@@ -49,13 +55,15 @@ animations.set('text', (el) => {
     by: 'chars'
   })[0].chars
 
+  el.style.opacity = 1
+
   return gsap.from(letters, {
     opacity: 0,
     translateX: 20,
-    translateY: 20,
+    translateY: 40,
     rotate: 20,
-    duration: 0.8,
-    stagger: 0.04,
+    duration: 0.2,
+    stagger: 0.005,
   })
 })
 

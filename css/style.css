@@ -11,10 +11,19 @@ img {
   margin: 60px 0;
 }
 
+p {
+  font-size: 40px;
+}
+
 h1 {
   font-size: 120px;
 }
 
-h1 .char {
+[data-animation="text"],
+[data-animation="title"] {
+  opacity: 0;
+}
+
+.char {
   display: inline-block;
 }
