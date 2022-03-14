@@ -24,6 +24,10 @@ h1 {
   opacity: 0;
 }
 
+img {
+  display: block;
+}
+
 .char {
   display: inline-block;
 }

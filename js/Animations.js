@@ -1,4 +1,4 @@
-import gsap from 'gsap/all'
+import gsap from 'gsap'
 import splitting from 'splitting'
 
 const animations = new Map()
@@ -26,8 +26,8 @@ const animations = new Map()
 animations.set('title', (el) => {
   const letters = splitting({
     target: el,
-    by: 'chars'
-  })[0].chars
+  })[0].words
+
 
   el.style.opacity = 1
 
@@ -44,15 +44,13 @@ animations.set('title', (el) => {
 animations.set('image', (el) => {
   return gsap.from(el, {
     scale: 1.1,
-    filter: 'blur(30px)',
     duration: 1
   })
 })
 
 animations.set('text', (el) => {
   const letters = splitting({
-    target: el,
-    by: 'chars'
+    target: el
   })[0].chars
 
   el.style.opacity = 1
@@ -60,7 +58,7 @@ animations.set('text', (el) => {
   return gsap.from(letters, {
     opacity: 0,
     translateX: 20,
-    translateY: 40,
+    translateY: 20,
     rotate: 20,
     duration: 0.2,
     stagger: 0.005,
