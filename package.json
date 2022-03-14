@@ -1,0 +1,19 @@
+{
+  "name": "landing-mohole",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel ./index.html",
+    "test": "echo \"esegui comando\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gsap": "^3.9.1",
+    "splitting": "^1.0.6"
+  },
+  "devDependencies": {
+    "parcel": "^2.3.2"
+  }
+}
